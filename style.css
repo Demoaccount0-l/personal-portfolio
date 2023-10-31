@@ -8,7 +8,7 @@
 :root{
     --text-font:'Roboto', sans-serif;
     --heading-font: 'Playfair Display', serif;
-    --textfont-size: 18px;
+    --textfont-size: 16px;
     --text-color: rgb(44, 44, 44)
 
 }
@@ -19,7 +19,7 @@ body {
     padding: 0;  
 }
 
-p{
+p,h1,h2{
     margin: 0;
 }
 
@@ -101,6 +101,7 @@ div.home-content p:nth-child(2){
 div.home-content p:nth-child(3){
     font-family: var(--text-font);
     font-size: var(--textfont-size);
+    color: var(--text-color);
 }
 
 div.home-content button{
@@ -134,4 +135,93 @@ footer div.footer-icons{
     display: flex;
     align-items: center;
     gap: 1.5rem;
+}
+
+section.about-section{
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    align-items: center;
+    background-color: whitesmoke;
+    gap: 2rem;
+}
+
+div.aboutme{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+div.aboutme h1{
+    color: green;
+    font-size: var(--textfont-size);
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+div.aboutme h2{
+    color: #343b47e0;
+    font-family: var(--text-font);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    padding-top: 4px;
+    padding-bottom: 10px;
+}
+
+div.aboutme p{
+    line-height: 1.55rem;
+    padding-bottom: 6px;
+    color: rgb(55,65,81);
+    color-scheme: light;
+    font-weight: 400;
+    font-size: 15px;
+    font-family: var(--text-font);
+}
+
+div.aboutme p:last-child{
+    align-self: flex-start;
+}
+
+div.aboutme p:last-child a{
+    color: green;
+    font-size: 17px;
+}
+
+div.skillsandtools{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+div.skillsandtools h1{
+    color: #343b47e0;
+    font-family: var(--text-font);
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0.3rem;
+   
+}
+
+div.skillsimages{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 200px));
+    column-gap: 1rem;
+    row-gap: 2rem;
+}
+
+div.skillicon{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+div.skillicon svg{
+    width: 20vw;
+    height: 20vh;
+
 }
