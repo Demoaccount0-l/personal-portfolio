@@ -1,0 +1,137 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+
+}
+
+:root{
+    --text-font:'Roboto', sans-serif;
+    --heading-font: 'Playfair Display', serif;
+    --textfont-size: 18px;
+    --text-color: rgb(44, 44, 44)
+
+}
+
+
+body {
+    margin: 0;
+    padding: 0;  
+}
+
+p{
+    margin: 0;
+}
+
+
+header{
+    width: 100vw;
+    position: sticky;
+    background-color: whitesmoke;
+    color: var(--text-color);
+    
+}
+
+
+div.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 4rem;
+}
+
+.header-content h3{ 
+    font-family: var(--heading-font);
+    letter-spacing: 0.1rem;
+    color: rgb(30, 116, 30);
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    gap:2rem;
+    justify-content: space-around;
+    font-family: var(--text-font);
+    
+}
+
+ul li a{
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+}
+
+main{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+.profile-img img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 5px solid;
+    border-color: rgba(177,177,177,0.6);
+}
+
+div.home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--text-color);
+}
+
+div.home-content p:first-child{
+    color: green;
+    font-family: var(--text-font);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+div.home-content p:nth-child(2){
+    font-size: 41px;
+    font-family: var(--text-font);
+    color: #3b465be0;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+}
+div.home-content p:nth-child(3){
+    font-family: var(--text-font);
+    font-size: var(--textfont-size);
+}
+
+div.home-content button{
+    padding: 0.8rem;
+    border-radius: 1.5rem;
+    margin-top: 6px;
+    font-family: var(--text-font);
+    font-size: var(--textfont-size);
+    background-color: green;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+footer{
+    display: flex;
+    background: #f3f7ef;
+    box-shadow: inset 5px 5px 4px 0px #dde5da;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+footer svg{
+    width:23px;
+    height: 23px;
+}
+
+footer div.footer-icons{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
