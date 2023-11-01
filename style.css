@@ -47,6 +47,12 @@ div.header-content {
     color: rgb(30, 116, 30);
 }
 
+div.header-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 ul {
     list-style-type: none;
     display: flex;
@@ -247,58 +253,58 @@ div.project-heading h2 {
     letter-spacing: 0.3rem;
 }
 
-div.projects{
+div.projects {
     width: 75%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    
+
 }
 
-div.project{
+div.project {
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
     gap: 2rem;
 }
 
-div.project-details{
+div.project-details {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 90%;
 }
 
-div.project-details h2{
+div.project-details h2 {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    color:#343b47e0;
+    color: #343b47e0;
     font-weight: 900;
     font-family: var(--text-font);
     letter-spacing: 0.12rem;
 }
 
-div.project-details p span{
+div.project-details p span {
     font-size: 20px;
     color: green;
     font-family: var(--heading-font);
 }
 
-div.project-details p{
+div.project-details p {
     font-size: var(--textfont-size);
     font-family: var(--text-font);
     color: rgb(55, 65, 81);
     line-height: 1.6rem;
 }
 
-div.code-links{
+div.code-links {
     padding-top: 0.8rem;
     display: flex;
     align-items: center;
     gap: 2rem;
 }
 
-div.code-links a{
+div.code-links a {
     display: flex;
     border: 2px solid;
     border-radius: 1.8rem;
@@ -309,23 +315,23 @@ div.code-links a{
     gap: 0.4rem;
 }
 
-div.code-links a.livepreview{
+div.code-links a.livepreview {
     color: green;
     fill: green;
 }
 
-div.code-links a.codelink{
+div.code-links a.codelink {
     color: rgb(55, 65, 81);
     fill: rgb(55, 65, 81);
 }
 
-div.code-links a svg{
+div.code-links a svg {
     width: 20px;
     height: 20px;
 
 }
 
-div.see-more a{
+div.see-more a {
     display: block;
     padding: 0.6rem 1.2rem;
     border-radius: 2rem;
@@ -335,4 +341,73 @@ div.see-more a{
     font-size: 22px;
     font-weight: 800;
     font-family: var(--text-font);
+}
+
+/* ------- hamgurger-menu ----- */
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+
+}
+
+.bar {
+    display: block;
+    width: 24px;
+    height: 5px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background-color: rgb(77, 74, 74);
+    border-radius: 8px;
+
+}
+
+@media (max-width:650px) {
+
+    ul.links{
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid green;
+        border-radius: 50%;
+        width: 48px;
+        height: 50px;
+        gap: 3px;
+
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    
+
+    ul.active{
+        display: block;
+        position: fixed;
+        top: 45px;
+        right: 0px;
+        background: whitesmoke;
+        height: 100%;
+        width: 40vw;
+        padding: 1rem;
+    }
+
+    ul.active li {
+        margin: 10px;
+    }
+
 }

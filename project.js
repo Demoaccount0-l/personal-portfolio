@@ -71,8 +71,8 @@ const printProjects = () => {
     </div>`;
         projects.appendChild(newproject);
     })
-    
+
 }
 
 
-document.onload(printProjects());
+printProjects();
