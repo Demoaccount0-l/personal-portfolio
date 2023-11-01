@@ -26,7 +26,7 @@ h2 {
 
 
 header {
-    width: 100vw;
+    width: 100%;
     position: sticky;
     background-color: whitesmoke;
     color: var(--text-color);
@@ -119,6 +119,7 @@ div.home-content button {
 }
 
 footer {
+    height: 10vw;
     display: flex;
     background: #f3f7ef;
     box-shadow: inset 5px 5px 4px 0px #dde5da;
@@ -229,9 +230,12 @@ div.skillicon svg {
 }
 
 section#projects-section {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2rem 0.1rem;
+    gap: 1.5rem;
 
 }
 
@@ -244,24 +248,25 @@ div.project-heading h2 {
 }
 
 div.projects{
-    padding: 3rem;
+    width: 75%;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    flex-wrap: wrap;
+    gap: 2rem;
+    
 }
 
 div.project{
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 div.project-details{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    width: 90%;
 }
 
 div.project-details h2{
@@ -318,4 +323,16 @@ div.code-links a svg{
     width: 20px;
     height: 20px;
 
+}
+
+div.see-more a{
+    display: block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 2rem;
+    color: green;
+    text-decoration: none;
+    border: 2px solid green;
+    font-size: 22px;
+    font-weight: 800;
+    font-family: var(--text-font);
 }
