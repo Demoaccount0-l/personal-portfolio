@@ -7,7 +7,7 @@ let myProjects = [
         Description: 'As you might have already guessed, this is a JavaScript-based calculator. It handles all your day to day mathematical needs very well. Have a look.',
         ProjectImg: './project_img/calculator_app.png',
         ImgAlt: 'Calculator project Image',
-        livePreview: 'https://github.com/Demoaccount0-l/calculator/',
+        livePreview: 'https://demoaccount0-l.github.io/calculator/',
         codeLink: 'https://github.com/Demoaccount0-l/calculator/'
     },
     {
