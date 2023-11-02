@@ -76,3 +76,86 @@ const printProjects = () => {
 
 
 printProjects();
+
+
+function scrollUp(){
+    const scrollUp = document.getElementById("scroll-up");
+
+    if(this.scrollY >= 500) scrollUp.classList.add("show-scroll");
+    else scrollUp.classList.remove("show-scroll");
+}
+
+window.addEventListener('scroll', scrollUp);
+
+
+
+function updateUnderlinePosition() {
+    //Select all 'section' Elements on the page
+    const sections = document.querySelectorAll("section");
+
+    // Initialize variable to keep track of the currently visible section
+    let currentSection = null;
+
+    //loop through each section
+    sections.forEach((section) => {
+        //get the position and dimensions of the section relative to the viewport
+        const rect = section.getBoundingClientRect();
+
+       //Check if the section is at least 50% visible in the viewport
+       if(rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2 ) {
+            //if the condition is met, it means the section is currently visible
+            currentSection = section;
+        }
+    });
+
+  if (currentSection) {
+    // Find the link in the navigation bar that corresponds to the currently visible section
+    const correspondingLink = document.querySelector(
+      `a[href="#${currentSection.id}"]`
+    );
+
+
+    // Select the underline element in the navigation bar
+    const underline = document.querySelector(".underline");
+
+    // Check if both the corresponding link and the underline element are found
+    if (correspondingLink && underline) {
+      // Get the position and dimensions of the corresponding link
+      const linkRect = correspondingLink.getBoundingClientRect();
+
+      // Calculate the offset of the link from the left edge of the container
+      const containerOffset = correspondingLink.offsetLeft;
+
+      // Set the width of the underline to be the same as the width of the corresponding link
+      underline.style.width = linkRect.width + "px";
+
+      // Set the horizontal position of the underline to match the horizontal position of the corresponding link
+      underline.style.transform = `translateX(${containerOffset}px)`;
+    }
+  }
+}
+
+
+window.addEventListener("scroll", updateUnderlinePosition);
+window.addEventListener("resize", updateUnderlinePosition);
+
+// Delay the initial call to updateUnderlinePosition to ensure that the DOM elements are fully loaded
+window.addEventListener("load", function() {
+    this.setTimeout(updateUnderlinePosition, 100);
+})
+
+
+/* ---------- Dark theme ----------*/
+
+const icon = document.getElementById("icon");
+icon.addEventListener('click', ()=>{
+    document.body.classList.toggle("dark-theme");
+    document.body.style.transition = "background-color 1s";
+    if(document.body.classList.contains("dark-theme")){
+        icon.src="./project_img/brightness.webp";
+    }
+    else{
+        icon.src = "./project_img/dark-mode.jpg";
+    }
+
+})
